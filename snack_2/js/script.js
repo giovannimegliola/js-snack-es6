@@ -64,11 +64,27 @@ students.forEach((capital) => {
 });
 
 
+console.log(" ");
+
+
 console.log('Lista degli studenti con voto > 70:');
 
 const over70grades = students.filter(student => student.grades > 70);
 
 over70grades.forEach(student => {
-  console.log(`Lo studente ${student.name} ha ottenuto una media voti pari a: ${student.grades}`);
+  console.log(`Lo studente ${student.name} ha ottenuto un totale voti pari a: ${student.grades}`);
 });
+
+
+console.log(" ");
+
+console.log('Lista degli studenti con voto > 70 e Id > 120:');
+
+const over70and120 = students.filter(student => student.grades > 70 && student.id > 120);
+
+over70and120.forEach(student => {
+  console.log(`Lo studente ${student.name} ha ottenuto un totale voti pari a: ${student.grades} e ha id : ${student.id} `);
+});
+
+
 
