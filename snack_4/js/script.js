@@ -61,6 +61,7 @@ const serieA = [
 console.log(serieA);
 
 
+//numeri casuali per punti fatti e falli subiti
 
 serieA.forEach((team) => {
   team.puntiFatti = Math.floor(Math.random() * 114) + 1;
@@ -68,4 +69,17 @@ serieA.forEach((team) => {
 });
 
 
+//nuovo array usando destructuring con nomi e falli subiti
+
+const serieA1 = serieA.map((team) => {
+  const {nome, falliSubiti} = team; 
+
+  let stats = {
+    nome,
+    falliSubiti
+  }
+  return stats;
+});
+
+console.log(serieA1)
 
